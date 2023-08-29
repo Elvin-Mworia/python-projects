@@ -1,7 +1,2 @@
-# Python
-# Python
-# Python
-# Python
-# Python
-# python-projects
-# python-projects
+Python projects of varying difficulty for python practice
+
