@@ -224,15 +224,3 @@ while True:#main game loop
             print('Enter ORIGINAL to view the original grid.')
             input('Press Enter to continue...')
 
-
-
-
-
-
- 
-
-
-
-
-
-    
