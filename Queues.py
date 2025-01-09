@@ -8,4 +8,9 @@ class Queue:
       self.items.insert(0,data)
       self.size+=1
  
-
+#removing an last element from the queue
+   def dequeue(self):
+     data=self.items.pop()
+     self.size-=1
+     return data
+      
