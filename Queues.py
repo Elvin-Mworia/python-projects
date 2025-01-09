@@ -9,9 +9,12 @@ class Queue:
       self.inbound_stack.append(data)
       
  
-   #removing an last element from the queue
+   #removing an last element from the queue using the inbound and outbound stack
    def dequeue(self):
-     data=self.items.pop()
-     self.size-=1
-     return data
-      
+        if not self.outbound_stack:
+            while self.inbound_stack:
+                self.outbound_stack.append(self.inbound_stack.pop())
+        return self.outbound_stack.pop()
+
+
+
