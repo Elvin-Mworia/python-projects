@@ -17,4 +17,14 @@ class Queue:
         return self.outbound_stack.pop()
 
 
-
+queue=Queue()
+queue.enqueue(5)
+queue.enqueue(6)
+queue.enqueue(7)
+print(queue.inbound_stack)
+print("outbound stack:",queue.outbound_stack)
+queue.dequeue()
+print("inbound stack after dequeue:",queue.inbound_stack)
+print("outbound_stack after dequeue",queue.outbound_stack)
+queue.dequeue()
+print("outbound_stack after dequeue",queue.outbound_stack)
