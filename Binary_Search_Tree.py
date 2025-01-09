@@ -6,4 +6,9 @@ class Binary_Search_Tree(Node):
     def __init__(self):
         self.root_node=None
 
-   
+    def min_node(self):
+            current=self.root_node
+            while current.left_child:
+                current=current.left_child
+            
+            return current
