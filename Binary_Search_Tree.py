@@ -96,10 +96,10 @@ class Binary_Search_Tree(Node):
 
               node.data=leftmost_node.data
 
-         if parent_of_leftmost_node.left_child==leftmost_node:
-            parent_of_leftmost_node.left_child=leftmost_node.right_child
-         else:
-              parent_of_leftmost_node.right_child=leftmost_node.right_child
+              if parent_of_leftmost_node.left_child==leftmost_node:
+                parent_of_leftmost_node.left_child=leftmost_node.right_child
+              else:
+                parent_of_leftmost_node.right_child=leftmost_node.right_child
     
     def search(self,data):#looks for data in the tree
          current=self.root_node
@@ -112,4 +112,14 @@ class Binary_Search_Tree(Node):
                    current=current.left_child
               else:
                    current=current.right_child
-                   
+
+tree=Binary_Search_Tree()
+tree.insert(5)
+tree.insert(2)
+tree.insert(7)
+tree.insert(1)
+tree.insert(9)
+tree.remove(1)
+for i in range(1,10):
+     found=tree.search(i)
+     print("{} {}".format(i,found))
