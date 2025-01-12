@@ -100,4 +100,16 @@ class Binary_Search_Tree(Node):
             parent_of_leftmost_node.left_child=leftmost_node.right_child
          else:
               parent_of_leftmost_node.right_child=leftmost_node.right_child
-              
+    
+    def search(self,data):#looks for data in the tree
+         current=self.root_node
+         while True:
+              if current is None:
+                   return None
+              elif current.data is data:
+                   return data
+              elif current.data > data:
+                   current=current.left_child
+              else:
+                   current=current.right_child
+                   
