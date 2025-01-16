@@ -11,3 +11,8 @@ cols=rows=len(matrix_elements)
 adjacency_matrix=[[0 for x  in range(rows)] for y in range(cols)]
 edges_list=[]
 
+for key in matrix_elements:
+    for neighbor in graph[key]:
+        edges_list.append({key,neighbor})
+
+print(edges_list)
