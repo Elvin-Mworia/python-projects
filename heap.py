@@ -21,3 +21,9 @@ class Heap:
             return k*2
         else:
             return k*2+1
+    def sink(self,k):#bubbles down the root node to the right position in the tree
+       while (k*2<=self.size):
+           mi=self.minindex(k)
+           if (self.heap[k]>self.heap[mi]):
+               self.heap[k],self.heap[mi]=self.heap[mi],self.heap[k]
+           k=mi         
