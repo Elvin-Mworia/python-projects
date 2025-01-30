@@ -9,3 +9,7 @@ class Heap:
                 self.heap[k],self.heap[k//2]=self.heap[k//2],self.heap[k]
             k//=2
 
+    def insert(self,item):
+        self.heap.append(item)
+        self.size+=1
+        self.float(self.size)
