@@ -1,9 +1,10 @@
 class Heap:
+    #minimum heap 
     def __init__(self):
         self.heap=[0]
         self.size=0
         
-    def float(self,k):
+    def float(self,k):#bubbles up the inserted element to the appropriate position in the heap
         while (k//2>0):
             if(self.heap[k] <self.heap[k//2]):
                 self.heap[k],self.heap[k//2]=self.heap[k//2],self.heap[k]
@@ -34,3 +35,13 @@ class Heap:
         self.heap.pop()
         self.sink(1)
         return item
+    
+h=Heap()
+for i in (4,8,7,2,9,10,5,1,3,6):
+    h.insert(i)
+print(h.heap)
+
+for i in range(10):
+    n=h.pop()
+    print(n)
+    print(h.heap)
