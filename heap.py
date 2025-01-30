@@ -13,3 +13,11 @@ class Heap:
         self.heap.append(item)
         self.size+=1
         self.float(self.size)
+    
+    def minindex(self,k):# chooses the appropriate child to compare with the parent
+        if (k*2+1>self.size):
+            return k*2
+        elif(self.heap[k*2]<self.heap[k*2+1]):
+            return k*2
+        else:
+            return k*2+1
