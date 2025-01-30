@@ -27,3 +27,10 @@ class Heap:
            if (self.heap[k]>self.heap[mi]):
                self.heap[k],self.heap[mi]=self.heap[mi],self.heap[k]
            k=mi         
+    def pop(self):
+        item=self.heap[1]
+        self.heap[1]=self.heap[self.size]#swap the last node in the array as the root node
+        self.size-=1
+        self.heap.pop()
+        self.sink(1)
+        return item
