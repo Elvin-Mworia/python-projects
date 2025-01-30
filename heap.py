@@ -11,10 +11,11 @@ class Heap:
             k//=2
 
     def insert(self,item):
+        print('inserting {} in {}'.format(item,self.heap))
         self.heap.append(item)
         self.size+=1
         self.float(self.size)
-    
+        
     def minindex(self,k):# chooses the appropriate child to compare with the parent
         if (k*2+1>self.size):
             return k*2
