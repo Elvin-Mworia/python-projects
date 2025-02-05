@@ -34,9 +34,8 @@ def partition(unsorted_array,first_index,last_index):
     unsorted_array[pivot_index]=unsorted_array[less_than_pivot_index]
     unsorted_array[less_than_pivot_index]=pivot
     return less_than_pivot_index
-import random
 
-# 1000 random numbers not exceeding 100000
+# 100 random numbers not exceeding 100000
 random_numbers = [random.randint(0, 100000) for _ in range(100)]
 
 
