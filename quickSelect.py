@@ -1,12 +1,12 @@
 #selects the ith smallest or largest element in an unordered list
+import random
 def quickSelect(unsorted_array,left,right,k):
     split=partition(unsorted_array,left,right)
 
     if split == k:
         return unsorted_array[split]
-    elif split<k:
+    elif split < k:
         return quickSelect(unsorted_array,split+1,right,k)
-    
     else:
         return quickSelect(unsorted_array,left,split-1,k)
 
@@ -39,7 +39,13 @@ def partition(unsorted_array,first_index,last_index):
         else:
             break
 
-        unsorted_array[pivot_index]=unsorted_array[less_than_pivot_index]
-        unsorted_array[less_than_pivot_index]=pivot
+    unsorted_array[pivot_index]=unsorted_array[less_than_pivot_index]
+    unsorted_array[less_than_pivot_index]=pivot
 
-        return less_than_pivot_index
+    return less_than_pivot_index
+    
+# 100 random numbers not exceeding 100000
+random_numbers = [random.randint(0, 100000) for _ in range(100)]
+
+
+print(quickSelect(random_numbers,0,len(random_numbers)-1,50))
