@@ -9,9 +9,9 @@ def quickSort(unsorted_array,first,last):
         quickSort(unsorted_array,partition_point+1,last)     
 
 def partition(unsorted_array,first_index,last_index):
-    pivot=unsorted_array[first_index]
-    pivot_index=first_index
-    index_of_last_element=last_index
+    pivot=unsorted_array[first_index]#value of the pivot element
+    pivot_index=first_index#index of the pivot element
+    index_of_last_element=last_index#index of last element after the pivot element
 
     less_than_pivot_index=index_of_last_element
     greater_than_pivot_index=first_index+1
