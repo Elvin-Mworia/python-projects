@@ -4,7 +4,7 @@ def quickSort(unsorted_array,first,last):
         return 
     else:
         partition_point=partition(unsorted_array,first,last) 
-        print(unsorted_array)
+        print("pivot element {}==>{}".format(unsorted_array[partition_point],unsorted_array))
         quickSort(unsorted_array,first,partition_point-1)
         quickSort(unsorted_array,partition_point+1,last)     
 
@@ -33,10 +33,10 @@ def partition(unsorted_array,first_index,last_index):
             break
     unsorted_array[pivot_index]=unsorted_array[less_than_pivot_index]
     unsorted_array[less_than_pivot_index]=pivot
-    return less_than_pivot_index
+    return less_than_pivot_index #less_than_pivot_index becomes the returned pivot element
 
 # 100 random numbers not exceeding 100000
-random_numbers = [random.randint(0, 100000) for _ in range(100)]
+random_numbers = [random.randint(0, 100000) for _ in range(10)]
 
 
 quickSort(random_numbers,0,len(random_numbers)-1)
