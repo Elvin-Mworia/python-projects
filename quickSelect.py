@@ -14,7 +14,7 @@ def quickSelect(unsorted_array,left,right,k):
 
 
 def partition(unsorted_array,first_index,last_index):
-    if first_index==last_index:
+    if first_index==last_index:#when the list has only one element
         return first_index
     
     pivot=unsorted_array[first_index]
