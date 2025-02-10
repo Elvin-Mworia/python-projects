@@ -13,7 +13,7 @@ def partition(unsorted_array,first_index,last_index):
     pivot_index=first_index#index of the pivot element
     index_of_last_element=last_index#index of last element after the pivot element
 
-    less_than_pivot_index=index_of_last_element
+    less_than_pivot_index=last_index
     greater_than_pivot_index=first_index+1
 
     while True:
