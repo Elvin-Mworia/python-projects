@@ -1,0 +1,6 @@
+gtts
+pydub
+pikepdf
+PyPDF2
+nltk
+pdfplumber
